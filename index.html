@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dyrique Mendoza — Business & Digital Strategy Professional</title>
+<meta name="description" content="Dyrique Mendoza — Business & Digital Strategy professional in Miami. Banking, account management, brand & digital strategy, and entrepreneurship." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#12294a; --navy2:#0b1c34; --ink:#1b2430; --slate:#5a6676;
+    --line:#e5e8ee; --bg:#ffffff; --soft:#f6f8fb; --accent:#c6a15b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:940px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+  a{color:inherit}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:18px;letter-spacing:.02em}
+  .navlinks{display:flex;gap:26px;font-size:14px;font-weight:500}
+  .navlinks a{color:var(--slate);text-decoration:none;transition:color .2s}
+  .navlinks a:hover{color:var(--navy)}
+  @media(max-width:640px){.navlinks{display:none}}
+
+  /* HERO */
+  header.hero{background:linear-gradient(160deg,#0b1c34 0%,#12294a 60%,#1c3a63 100%);color:#fff;padding:96px 0 84px}
+  .eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
+  header.hero h1{font-size:clamp(38px,7vw,62px);color:#fff;margin-bottom:18px}
+  header.hero .lead{font-size:clamp(17px,2.4vw,21px);color:#c9d4e4;max-width:640px;margin-bottom:34px;font-weight:400}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:2px;font-size:15px;font-weight:600;text-decoration:none;transition:transform .15s,background .2s}
+  .btn-primary{background:var(--accent);color:#12294a}
+  .btn-primary:hover{transform:translateY(-2px)}
+  .btn-ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.08)}
+
+  /* SECTIONS */
+  section{padding:72px 0;border-bottom:1px solid var(--line)}
+  .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+  section h2{font-size:clamp(26px,4vw,34px);margin-bottom:26px;color:var(--navy)}
+  .about p{font-size:18px;color:#33404f;max-width:720px}
+  .about p+p{margin-top:16px}
+
+  /* SKILLS */
+  .tags{display:flex;flex-wrap:wrap;gap:10px}
+  .tag{background:var(--soft);border:1px solid var(--line);color:#33404f;padding:9px 15px;border-radius:2px;font-size:14px;font-weight:500}
+
+  /* EXPERIENCE */
+  .job{padding:24px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:200px 1fr;gap:24px}
+  .job:first-of-type{border-top:none}
+  .job .meta .role{font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--navy)}
+  .job .meta .co{font-size:15px;color:#33404f;font-weight:600;margin-top:2px}
+  .job .meta .when{font-size:13px;color:var(--slate);margin-top:6px}
+  .job ul{list-style:none;color:#3c4653;font-size:15.5px}
+  .job li{position:relative;padding-left:20px;margin-bottom:8px}
+  .job li:before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;background:var(--accent);border-radius:50%}
+  @media(max-width:640px){.job{grid-template-columns:1fr;gap:8px}}
+
+  /* EDUCATION */
+  .edu{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;background:var(--soft);border:1px solid var(--line);padding:22px 24px;border-radius:3px}
+  .edu .deg{font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--navy)}
+  .edu .sch{color:#33404f;font-size:15px;margin-top:2px}
+  .edu .yr{color:var(--slate);font-size:14px;align-self:center}
+
+  /* CONTACT */
+  footer{background:#0b1c34;color:#c9d4e4;padding:70px 0 40px;text-align:center}
+  footer h2{color:#fff;font-size:clamp(26px,4vw,34px);margin-bottom:14px}
+  footer p{max-width:520px;margin:0 auto 30px;color:#a9b7cc}
+  .clinks{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:38px}
+  .foot-note{font-size:13px;color:#6b7d96;border-top:1px solid rgba(255,255,255,.1);padding-top:24px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">Dyrique&nbsp;Mendoza</span>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Miami, FL</div>
+    <h1>Dyrique Mendoza</h1>
+    <p class="lead">Business &amp; digital strategy professional with experience across banking, account management, brand building, and entrepreneurship — helping people and organizations turn ideas into measurable growth.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#contact">Get in touch</a>
+      <a class="btn btn-ghost" href="DyriqueMendoza_Resume.pdf" target="_blank">View résumé (PDF)</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="kicker">About</div>
+    <h2>A little about me</h2>
+    <p>I'm a Miami-based professional finishing my B.S. in Business of Entertainment with a Digital Strategy focus at Full Sail University. My background blends the relationship and detail discipline of banking with the creativity of brand and digital strategy — and the hustle of building things from scratch.</p>
+    <p>I've managed client accounts at a marketing agency, served clients in banking, and founded my own consulting and e-commerce ventures. I care about clear communication, real results, and doing right by the people I work with. I'm looking to bring that mix of strategy, ownership, and drive to a growing team.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="kicker">Skills</div>
+    <h2>What I bring</h2>
+    <div class="tags">
+      <span class="tag">Digital &amp; Brand Strategy</span>
+      <span class="tag">Business Development</span>
+      <span class="tag">Account Management</span>
+      <span class="tag">Client Relationships</span>
+      <span class="tag">Relationship Banking</span>
+      <span class="tag">Sales &amp; Financial Products</span>
+      <span class="tag">Marketing Automation &amp; CRM</span>
+      <span class="tag">Social Media &amp; Content</span>
+      <span class="tag">Public Speaking</span>
+      <span class="tag">Project Management</span>
+      <span class="tag">E-Commerce Operations</span>
+      <span class="tag">Entrepreneurship &amp; Leadership</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="kicker">Experience</div>
+    <h2>Where I've worked</h2>
+
+    <div class="job">
+      <div class="meta"><div class="role">Private Banker</div><div class="co">South State Bank</div><div class="when">Feb 2026 – Present · Miami</div></div>
+      <ul>
+        <li>Serve as a trusted banking contact, resolving clients' financial needs and building lasting relationships.</li>
+        <li>Apply knowledge of banking products, accounts, and credit to help clients reach their financial goals.</li>
+        <li>Uphold compliance and service standards in a fast-paced, high-volume environment.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="meta"><div class="role">Founder</div><div class="co">Dyrique Mendoza LLC</div><div class="when">Jan 2026 – Present · Miami</div></div>
+      <ul>
+        <li>Founded a business-strategy and fundability advisory firm for young and first-generation entrepreneurs.</li>
+        <li>Built the brand, website, and client funnel end-to-end; landed the firm's first paying client.</li>
+        <li>Speak publicly on business credit, funding, banking, leadership, and motivation.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="meta"><div class="role">Founder</div><div class="co">Soulja Steppin Kicks (SSK)</div><div class="when">Jan 2022 – Present · Miami</div></div>
+      <ul>
+        <li>Founded and operate an e-commerce streetwear and sneaker brand and marketplace; grew a 4,000+ following.</li>
+        <li>Featured on WSVN 7News for youth-entrepreneurship work in Miami Gardens.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="meta"><div class="role">Director of Community &amp; Youth Engagement</div><div class="co">BSI Global</div><div class="when">Jan 2025 – Feb 2026 · Miami</div></div>
+      <ul>
+        <li>Led community and youth-engagement initiatives, representing the organization at events and partnerships.</li>
+        <li>Developed outreach connecting young people to entrepreneurship and financial education.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="meta"><div class="role">Account Executive</div><div class="co">The EWE Agency</div><div class="when">Feb 2023 – Jul 2025 · Miami</div></div>
+      <ul>
+        <li>Managed client accounts and relationships, driving communication, retention, and results.</li>
+        <li>Promoted from Junior Account Executive to Account Executive, taking full ownership of client work.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="meta"><div class="role">E-Commerce &amp; Fulfillment Coordinator</div><div class="co">Sam's Club</div><div class="when">Jan 2020 – Dec 2022 · Miami</div></div>
+      <ul>
+        <li>Coordinated e-commerce order fulfillment and operations in a high-volume retail environment.</li>
+        <li>Built an early retail foundation with The Home Depot and Walmart (2018–2019).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="kicker">Education &amp; Licenses</div>
+    <h2>Education</h2>
+    <div class="edu">
+      <div>
+        <div class="deg">B.S., Business of Entertainment — Digital Strategy</div>
+        <div class="sch">Full Sail University · Winter Park, FL</div>
+      </div>
+      <div class="yr">2026</div>
+    </div>
+    <div class="edu" style="margin-top:14px">
+      <div>
+        <div class="deg">Florida Life Insurance License</div>
+        <div class="sch">State pre-licensing exam passed</div>
+      </div>
+      <div class="yr">2026</div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's connect</h2>
+    <p>Open to opportunities in business development, digital strategy, account management, and banking. I'd love to hear from you.</p>
+    <div class="clinks">
+      <a class="btn btn-primary" href="mailto:dyrique3@gmail.com">Email me</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/dyrique-mendoza-20547b241" target="_blank">LinkedIn</a>
+      <a class="btn btn-ghost" href="DyriqueMendoza_Resume.pdf" target="_blank">Download résumé</a>
+    </div>
+    <div class="foot-note">© 2026 Dyrique Mendoza · Miami, FL</div>
+  </div>
+</footer>
+
+</body>
+</html>
